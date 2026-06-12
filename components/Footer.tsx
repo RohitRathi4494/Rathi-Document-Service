@@ -95,7 +95,7 @@ export default function Footer() {
               color: "#F0D98A",
             }}
           >
-            ⭐ 10+ Years of Trusted Service in Gurugram
+            ⭐ 15+ Years of Trusted Service in Gurugram
           </div>
         </div>
 

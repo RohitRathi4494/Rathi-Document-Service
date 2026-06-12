@@ -51,7 +51,7 @@ function GoldSeal({ size = 420 }: { size?: number }) {
 }
 
 const trustBadges = [
-  { icon: "📄", label: "10+ Years", sub: "Experience" },
+  { icon: "📄", label: "15+ Years", sub: "Experience" },
   { icon: "✅", label: "5000+", sub: "Documents Served" },
   { icon: "⚡", label: "Same-Day", sub: "Service Available" },
   { icon: "📍", label: "All Gurugram", sub: "Areas Covered" },
@@ -172,7 +172,7 @@ export default function Hero() {
           }}
         >
           From Rent Agreements to Sale Deeds — we draft, prepare, register,
-          and deliver all your legal documents with accuracy, speed, and 10+
+          and deliver all your legal documents with accuracy, speed, and 15+
           years of expertise. Serving all of Gurugram.
         </motion.p>
 

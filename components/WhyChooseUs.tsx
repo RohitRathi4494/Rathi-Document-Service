@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 
 const features = [
-  "10+ Years of Experience in Gurugram",
+  "15+ Years of Experience in Gurugram",
   "All documents legally compliant with Haryana stamp duty rules",
   "Same-day service for urgent requirements",
   "Doorstep delivery available across Gurugram",
@@ -90,7 +90,7 @@ export default function WhyChooseUs() {
             marginBottom: "2.5rem",
           }}
         >
-          For over 10 years, families, property dealers, businesses, and
+          For over 15 years, families, property dealers, businesses, and
           individuals across Gurugram have relied on us for accurate, timely,
           and affordable legal document preparation.
         </p>

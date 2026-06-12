@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "Is a rent agreement made by you legally valid?",
-    a: "Absolutely. All our documents are drafted in accordance with Haryana stamp duty rules and are legally enforceable. For documents like Sale Deeds and Lease Agreements, we also provide full assistance with sub-registrar registration. We have 10+ years of experience serving Gurugram clients.",
+    a: "Absolutely. All our documents are drafted in accordance with Haryana stamp duty rules and are legally enforceable. For documents like Sale Deeds and Lease Agreements, we also provide full assistance with sub-registrar registration. We have 15+ years of experience serving Gurugram clients.",
   },
   {
     q: "What are your charges / fees?",
@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "How do I book an appointment?",
-    a: "Simply fill in the booking form above, or WhatsApp us directly at +91-XXXXXXXXXX. We'll confirm your appointment within 2 hours.",
+    a: "Simply fill in the booking form above, or WhatsApp us directly at +91-9910406641. We'll confirm your appointment within 2 hours.",
   },
 ];
 
