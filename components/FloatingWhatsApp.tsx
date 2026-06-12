@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { MessageCircle, ArrowUp } from "lucide-react";
 
-const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || "91XXXXXXXXXX";
+const WHATSAPP = "919910406641";
 
 export default function FloatingWhatsApp() {
   const [showScrollTop, setShowScrollTop] = useState(false);

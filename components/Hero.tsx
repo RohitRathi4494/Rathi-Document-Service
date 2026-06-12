@@ -3,7 +3,7 @@
 import { motion, type Variants } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
-const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || "91XXXXXXXXXX";
+const WHATSAPP = "919910406641";
 
 function GoldSeal({ size = 420 }: { size?: number }) {
   return (

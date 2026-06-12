@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { MessageCircle, Phone, Mail, Clock, MapPin, ExternalLink } from "lucide-react";
 
-const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || "91XXXXXXXXXX";
+const WHATSAPP = "919910406641";
 const PHONE = process.env.NEXT_PUBLIC_PHONE || "+91-XXXXXXXXXX";
 
 const quickLinks = [

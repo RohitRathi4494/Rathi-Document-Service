@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, MessageCircle, Map } from "lucide-react";
 
-const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || "91XXXXXXXXXX";
+const WHATSAPP = "919910406641";
 const PHONE = process.env.NEXT_PUBLIC_PHONE || "+91-XXXXXXXXXX";
 const ADDRESS = process.env.NEXT_PUBLIC_ADDRESS || "[Your Address], Gurugram, Haryana - 122001";
 

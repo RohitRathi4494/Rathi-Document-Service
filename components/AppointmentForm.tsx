@@ -12,7 +12,7 @@ import {
   timeSlots,
 } from "@/lib/validations";
 
-const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || "91XXXXXXXXXX";
+const WHATSAPP = "919910406641";
 
 function SuccessCard({ data, onReset }: { data: AppointmentFormData; onReset: () => void }) {
   return (
