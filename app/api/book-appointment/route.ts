@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { appointmentSchema } from "@/lib/validations";
 import { transporter } from "@/lib/mailer";
-import { customerConfirmationEmail, ownerAlertEmail } from "@/lib/emailTemplates";
+import { ownerAlertEmail } from "@/lib/emailTemplates";
 
 export async function POST(req: NextRequest) {
   try {
@@ -21,21 +21,11 @@ export async function POST(req: NextRequest) {
     }
 
     const data = validation.data;
-    const fromEmail = process.env.FROM_EMAIL || process.env.SMTP_USER || "noreply@rathidocuments.in";
-    const ownerEmail = process.env.OWNER_EMAIL || "owner@rathidocuments.in";
-    const mailSender = process.env.SMTP_USER || fromEmail;
+    const ownerEmail = process.env.OWNER_EMAIL || "rathigurugram@gmail.com";
+    const mailSender = process.env.SMTP_USER || "rathidocumentpoint@gmail.com";
 
-    // Send emails — but don't block success if email fails
+    // Send appointment details to owner only
     try {
-      // Customer confirmation
-      await transporter.sendMail({
-        from: `"Rathi Document Services" <${mailSender}>`,
-        to: data.email,
-        subject: "Your Appointment is Confirmed — Rathi Document Services",
-        html: customerConfirmationEmail(data),
-      });
-
-      // Owner alert
       await transporter.sendMail({
         from: `"Rathi Document Services Website" <${mailSender}>`,
         to: ownerEmail,
