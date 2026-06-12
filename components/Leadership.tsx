@@ -87,14 +87,15 @@ export default function Leadership() {
               {/* Top Accent Line */}
               <div className="card-top-accent" />
 
-              {/* Title & Badge */}
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1.5rem" }}>
+              {/* Icon */}
+              <div style={{ display: "flex", alignItems: "center", marginBottom: "1.5rem" }}>
                 <div className="leader-icon-bg">{leader.icon}</div>
-                <span className="leader-badge">{leader.title}</span>
               </div>
 
               {/* Name & Role */}
-              <h3 className="leader-name">{leader.name}</h3>
+              <h3 className="leader-name">
+                {leader.name},&nbsp;<span style={{ fontWeight: 500, color: "#9B7A2F" }}>{leader.title}</span>
+              </h3>
               <p className="leader-role">{leader.role}</p>
 
               {/* Divider */}
