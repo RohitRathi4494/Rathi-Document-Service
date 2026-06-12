@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
     // Send appointment details to owner only
     try {
       await transporter.sendMail({
-        from: `"Rathi Document Services Website" <${mailSender}>`,
+        from: `"Rathi Document Point Website" <${mailSender}>`,
         to: ownerEmail,
         subject: `🔔 New Appointment Request — ${data.documentType} — ${data.name}`,
         html: ownerAlertEmail(data),

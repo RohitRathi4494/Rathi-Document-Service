@@ -1,6 +1,6 @@
-# Rathi Document Services — Website
+# Rathi Document Point — Website
 
-Production-ready Next.js website for **Rathi Document Services**, Gurugram's trusted legal document drafting service.
+Production-ready Next.js website for **Rathi Document Point**, Gurugram's trusted legal document drafting service.
 
 **Live at:** [rathidocuments.in](https://rathidocuments.in)
 
@@ -141,4 +141,4 @@ lib/
 
 ---
 
-© 2024 Rathi Document Services
+© 2024 Rathi Document Point

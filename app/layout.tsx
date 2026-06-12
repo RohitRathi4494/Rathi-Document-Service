@@ -21,9 +21,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title:
-    "Rathi Document Services Gurugram | Rent Agreement, Affidavit, GPA, SPA, Sale Deed",
+    "Rathi Document Point Gurugram | Rent Agreement, Affidavit, GPA, SPA, Sale Deed",
   description:
-    "Rathi Document Services is Gurugram's trusted legal document service. Expert drafting & registration of Rent Agreement, Affidavit, GPA, SPA, Sale Deed, Lease Agreement and all court documents. Fast, accurate, affordable.",
+    "Rathi Document Point is Gurugram's trusted legal document service. Expert drafting & registration of Rent Agreement, Affidavit, GPA, SPA, Sale Deed, Lease Agreement and all court documents. Fast, accurate, affordable.",
   keywords: [
     "rent agreement gurugram",
     "affidavit gurugram",
@@ -37,17 +37,17 @@ export const metadata: Metadata = {
     "court documents gurugram",
   ],
   openGraph: {
-    title: "Rathi Document Services — Gurugram's Trusted Legal Document Service",
+    title: "Rathi Document Point — Gurugram's Trusted Legal Document Service",
     description:
       "Rent Agreement, Affidavit, GPA, SPA, Sale Deed & all legal documents drafted & registered by experts. Serving all of Gurugram.",
     url: "https://rathidocuments.in",
-    siteName: "Rathi Document Services",
+    siteName: "Rathi Document Point",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rathi Document Services Gurugram",
+    title: "Rathi Document Point Gurugram",
     description:
       "Expert legal document drafting & registration in Gurugram — Rent Agreement, Affidavit, GPA, SPA, Sale Deed and more.",
   },
@@ -63,11 +63,11 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LegalService",
-  name: "Rathi Document Services",
+  name: "Rathi Document Point",
   description:
     "Professional legal document drafting & registration service in Gurugram — Rent Agreement, Affidavit, GPA, SPA, Sale Deed, Lease, and all court documents.",
   url: "https://rathidocuments.in",
-  telephone: "+91-XXXXXXXXXX",
+  telephone: "+91-9910406641",
   address: {
     "@type": "PostalAddress",
     streetAddress: "[Your Address]",

@@ -69,7 +69,7 @@ export default function Leadership() {
             Meet Our Legal & Drafting Experts
           </h2>
           <p className="section-subtitle" style={{ margin: "0 auto" }}>
-            The professional team managing Rathi Document Services, combining legal counsel and years of document writing expertise.
+            The professional team managing Rathi Document Point, combining legal counsel and years of document writing expertise.
           </p>
         </div>
 

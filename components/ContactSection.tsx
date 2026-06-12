@@ -222,7 +222,7 @@ export default function ContactSection() {
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Rathi Document Services location in Gurugram"
+              title="Rathi Document Point location in Gurugram"
             />
 
             {/* Map CTA overlay */}

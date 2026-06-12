@@ -16,7 +16,7 @@ function Logo() {
     <div style={{ display: "flex", alignItems: "center", gap: "0.625rem" }}>
       <Image
         src="/logo.png"
-        alt="Rathi Document Services Logo"
+        alt="Rathi Document Point Logo"
         width={48}
         height={48}
         style={{ objectFit: "contain", flexShrink: 0 }}
@@ -47,7 +47,7 @@ function Logo() {
             display: "block",
           }}
         >
-          Services
+          Point
         </span>
       </div>
     </div>
@@ -101,7 +101,7 @@ export default function Navbar() {
           }}
           aria-label="Main navigation"
         >
-          <a href="#home" onClick={(e) => handleNavClick(e, "#home")} aria-label="Rathi Document Services — Home">
+          <a href="#home" onClick={(e) => handleNavClick(e, "#home")} aria-label="Rathi Document Point — Home">
           <Logo />
           </a>
 

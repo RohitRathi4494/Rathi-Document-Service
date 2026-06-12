@@ -65,14 +65,14 @@ export default function Footer() {
           <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
             <Image
               src="/logo.png"
-              alt="Rathi Document Services Logo"
+              alt="Rathi Document Point Logo"
               width={52}
               height={52}
               style={{ objectFit: "contain", flexShrink: 0 }}
             />
             <div>
               <div style={{ fontFamily: "var(--font-playfair)", fontWeight: 700, fontSize: "1rem", color: "#F0D98A", lineHeight: 1.15 }}>
-                Rathi Document Services
+                Rathi Document Point
               </div>
             </div>
           </div>
@@ -276,7 +276,7 @@ export default function Footer() {
         }}
       >
         <p style={{ fontSize: "0.8125rem", color: "rgba(250,247,242,0.5)", margin: 0 }}>
-          © 2024 Rathi Document Services. All rights reserved.
+          © 2024 Rathi Document Point. All rights reserved.
         </p>
         <p style={{ fontSize: "0.8125rem", color: "rgba(250,247,242,0.4)", margin: 0 }}>
           rathidocuments.in

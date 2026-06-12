@@ -43,7 +43,7 @@ export function customerConfirmationEmail(data: EmailData): string {
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Appointment Confirmed — Rathi Document Services</title>
+<title>Appointment Confirmed — Rathi Document Point</title>
 </head>
 <body style="margin:0;padding:0;background:#FAF7F2;font-family:'Helvetica Neue',Arial,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" style="background:#FAF7F2;padding:32px 16px;">
@@ -56,7 +56,7 @@ export function customerConfirmationEmail(data: EmailData): string {
             <div style="width:52px;height:52px;border:2px solid ${BRAND_GOLD};border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;">
               <span style="font-size:22px;">⚖️</span>
             </div>
-            <h1 style="margin:0;font-family:Georgia,serif;font-size:22px;color:${BRAND_GOLD};font-weight:700;letter-spacing:-0.01em;">Rathi Document Services</h1>
+            <h1 style="margin:0;font-family:Georgia,serif;font-size:22px;color:${BRAND_GOLD};font-weight:700;letter-spacing:-0.01em;">Rathi Document Point</h1>
             <p style="margin:6px 0 0;color:rgba(255,255,255,0.75);font-size:13px;">Gurugram's Most Trusted Legal Document Service</p>
           </td>
         </tr>
@@ -65,7 +65,7 @@ export function customerConfirmationEmail(data: EmailData): string {
         <tr>
           <td style="padding:40px;">
             <h2 style="margin:0 0 8px;font-family:Georgia,serif;font-size:24px;color:${BRAND_NAVY};">Appointment Request Received!</h2>
-            <p style="margin:0 0 24px;color:#5A5A7A;font-size:15px;line-height:1.6;">Dear <strong>${data.name}</strong>,<br/>Thank you for choosing Rathi Document Services. Your appointment request has been received and we will contact you within <strong>2 hours</strong> to confirm.</p>
+            <p style="margin:0 0 24px;color:#5A5A7A;font-size:15px;line-height:1.6;">Dear <strong>${data.name}</strong>,<br/>Thank you for choosing Rathi Document Point. Your appointment request has been received and we will contact you within <strong>2 hours</strong> to confirm.</p>
 
             <!-- Summary Box -->
             <table width="100%" cellpadding="0" cellspacing="0" style="background:#FAF7F2;border:2px solid ${BRAND_GOLD};border-radius:10px;margin-bottom:28px;">
@@ -122,7 +122,7 @@ export function customerConfirmationEmail(data: EmailData): string {
         <!-- Footer bar -->
         <tr>
           <td style="background:${BRAND_NAVY};padding:20px 40px;text-align:center;">
-            <p style="margin:0;font-size:12px;color:rgba(255,255,255,0.6);">© 2024 Rathi Document Services · rathidocuments.in</p>
+            <p style="margin:0;font-size:12px;color:rgba(255,255,255,0.6);">© 2024 Rathi Document Point · rathidocuments.in</p>
             <p style="margin:4px 0 0;font-size:11px;color:rgba(255,255,255,0.4);">This is an automated confirmation. Please do not reply to this email.</p>
           </td>
         </tr>
@@ -136,7 +136,7 @@ export function customerConfirmationEmail(data: EmailData): string {
 
 export function ownerAlertEmail(data: EmailData): string {
   const waMessage = encodeURIComponent(
-    `Hello ${data.name}, I am calling from Rathi Document Services regarding your appointment request for ${data.documentType}. Is this a good time to talk?`
+    `Hello ${data.name}, I am calling from Rathi Document Point regarding your appointment request for ${data.documentType}. Is this a good time to talk?`
   );
 
   return `
@@ -145,7 +145,7 @@ export function ownerAlertEmail(data: EmailData): string {
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>New Appointment — Rathi Document Services</title>
+<title>New Appointment — Rathi Document Point</title>
 </head>
 <body style="margin:0;padding:0;background:#0f2548;font-family:'Helvetica Neue',Arial,sans-serif;">
   <table width="100%" cellpadding="0" cellspacing="0" style="background:#0f2548;padding:32px 16px;">
@@ -221,7 +221,7 @@ export function ownerAlertEmail(data: EmailData): string {
         <!-- Footer -->
         <tr>
           <td style="background:${BRAND_NAVY};padding:16px 40px;text-align:center;">
-            <p style="margin:0;font-size:12px;color:rgba(255,255,255,0.6);">Rathi Document Services · rathidocuments.in · Internal Notification</p>
+            <p style="margin:0;font-size:12px;color:rgba(255,255,255,0.6);">Rathi Document Point · rathidocuments.in · Internal Notification</p>
           </td>
         </tr>
 

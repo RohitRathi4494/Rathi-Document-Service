@@ -79,7 +79,7 @@ export default function WhyChooseUs() {
             marginBottom: "1.5rem",
           }}
         >
-          Why Gurugram Trusts Rathi Document Services
+          Why Gurugram Trusts Rathi Document Point
         </h2>
         <p
           style={{
@@ -125,7 +125,7 @@ export default function WhyChooseUs() {
               fontWeight: 600,
             }}
           >
-            — Rathi Document Services
+            — Rathi Document Point
           </cite>
         </blockquote>
       </motion.div>

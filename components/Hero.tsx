@@ -94,7 +94,7 @@ export default function Hero() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      aria-label="Hero — Rathi Document Services"
+      aria-label="Hero — Rathi Document Point"
     >
       {/* Seal watermark */}
       <div
