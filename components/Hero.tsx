@@ -79,7 +79,6 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="hero-gradient"
       style={{
         minHeight: "100vh",
         display: "flex",
@@ -88,8 +87,12 @@ export default function Hero() {
         justifyContent: "center",
         position: "relative",
         overflow: "hidden",
-        paddingTop: 88,
+        paddingTop: 108,
         paddingBottom: 64,
+        backgroundImage: "linear-gradient(rgba(15, 37, 72, 0.9), rgba(11, 28, 54, 0.85)), url('/legal_bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
       aria-label="Hero — Rathi Document Services"
     >

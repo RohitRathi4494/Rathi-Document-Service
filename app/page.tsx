@@ -3,6 +3,7 @@ import ServicesTicker from "@/components/ServicesTicker";
 import ServicesGrid from "@/components/ServicesGrid";
 import HowItWorks from "@/components/HowItWorks";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import Leadership from "@/components/Leadership";
 import AreasWeServe from "@/components/AreasWeServe";
 import Testimonials from "@/components/Testimonials";
 import AppointmentForm from "@/components/AppointmentForm";
@@ -17,6 +18,7 @@ export default function HomePage() {
       <ServicesGrid />
       <HowItWorks />
       <WhyChooseUs />
+      <Leadership />
       <AreasWeServe />
       <Testimonials />
       <AppointmentForm />
