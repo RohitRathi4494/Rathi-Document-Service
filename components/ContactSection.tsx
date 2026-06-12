@@ -4,39 +4,46 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, MessageCircle, Map } from "lucide-react";
 
 const WHATSAPP = "919910406641";
-const PHONE = process.env.NEXT_PUBLIC_PHONE || "+91-XXXXXXXXXX";
-const ADDRESS = process.env.NEXT_PUBLIC_ADDRESS || "[Your Address], Gurugram, Haryana - 122001";
+const PHONE1 = "+91-9910406641";
+const PHONE2 = "+91-9911346641";
+const ADDRESS = "Shed no. 6, Tehsil Wazirabad, Sector-57, Gurugram, Haryana - 122001";
 
 const contactDetails = [
   {
     icon: MapPin,
     label: "Address",
-    value: ADDRESS,
-    link: null,
+    items: [
+      { text: ADDRESS, href: null }
+    ],
   },
   {
     icon: Phone,
     label: "Phone",
-    value: PHONE,
-    link: `tel:${PHONE}`,
+    items: [
+      { text: PHONE1, href: `tel:+919910406641` },
+      { text: PHONE2, href: `tel:+919911346641` }
+    ],
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: PHONE,
-    link: `https://wa.me/${WHATSAPP}`,
+    items: [
+      { text: PHONE1, href: `https://wa.me/${WHATSAPP}` }
+    ],
   },
   {
     icon: Mail,
     label: "Email",
-    value: "info@rathidocuments.in",
-    link: "mailto:info@rathidocuments.in",
+    items: [
+      { text: "rathigurugram@gmail.com", href: "mailto:rathigurugram@gmail.com" }
+    ],
   },
   {
     icon: Clock,
     label: "Working Hours",
-    value: "Monday – Saturday: 10:00 AM – 7:00 PM\nSunday: By appointment only",
-    link: null,
+    items: [
+      { text: "Monday – Saturday: 09:00 AM – 06:00 PM\nSunday: By appointment only", href: null }
+    ],
   },
 ];
 
@@ -102,7 +109,7 @@ export default function ContactSection() {
             </h3>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-              {contactDetails.map(({ icon: Icon, label, value, link }) => (
+              {contactDetails.map(({ icon: Icon, label, items }) => (
                 <div
                   key={label}
                   style={{ display: "flex", alignItems: "flex-start", gap: "1rem" }}
@@ -131,42 +138,50 @@ export default function ContactSection() {
                         textTransform: "uppercase",
                         letterSpacing: "0.08em",
                         color: "#5A5A7A",
-                        marginBottom: "0.25rem",
+                        marginBottom: "0.375rem",
                       }}
                     >
                       {label}
                     </div>
-                    {link ? (
-                      <a
-                        href={link}
-                        target={link.startsWith("http") ? "_blank" : undefined}
-                        rel={link.startsWith("http") ? "noopener noreferrer" : undefined}
-                        style={{
-                          fontFamily: "var(--font-inter)",
-                          fontSize: "0.9375rem",
-                          fontWeight: 500,
-                          color: "#1B3A6B",
-                          textDecoration: "none",
-                          whiteSpace: "pre-line",
-                        }}
-                        onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#C9A84C")}
-                        onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "#1B3A6B")}
-                      >
-                        {value}
-                      </a>
-                    ) : (
-                      <span
-                        style={{
-                          fontFamily: "var(--font-inter)",
-                          fontSize: "0.9375rem",
-                          fontWeight: 500,
-                          color: "#1A1A2E",
-                          whiteSpace: "pre-line",
-                        }}
-                      >
-                        {value}
-                      </span>
-                    )}
+                    <div style={{ display: "flex", flexDirection: "column", gap: "0.375rem" }}>
+                      {items.map((item, index) =>
+                        item.href ? (
+                          <a
+                            key={index}
+                            href={item.href}
+                            target={item.href.startsWith("http") ? "_blank" : undefined}
+                            rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                            style={{
+                              fontFamily: "var(--font-inter)",
+                              fontSize: "0.9375rem",
+                              fontWeight: 500,
+                              color: "#1B3A6B",
+                              textDecoration: "none",
+                              whiteSpace: "pre-line",
+                              display: "block",
+                            }}
+                            onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#C9A84C")}
+                            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "#1B3A6B")}
+                          >
+                            {item.text}
+                          </a>
+                        ) : (
+                          <span
+                            key={index}
+                            style={{
+                              fontFamily: "var(--font-inter)",
+                              fontSize: "0.9375rem",
+                              fontWeight: 500,
+                              color: "#1A1A2E",
+                              whiteSpace: "pre-line",
+                              display: "block",
+                            }}
+                          >
+                            {item.text}
+                          </span>
+                        )
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}

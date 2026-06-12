@@ -4,7 +4,6 @@ import Image from "next/image";
 import { MessageCircle, Phone, Mail, Clock, MapPin, ExternalLink } from "lucide-react";
 
 const WHATSAPP = "919910406641";
-const PHONE = process.env.NEXT_PUBLIC_PHONE || "+91-XXXXXXXXXX";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
@@ -192,12 +191,13 @@ export default function Footer() {
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             {[
-              { Icon: MapPin, text: "[Your Address], Gurugram, Haryana - 122001", href: null },
-              { Icon: Phone, text: PHONE, href: `tel:${PHONE}` },
-              { Icon: Mail, text: "info@rathidocuments.in", href: "mailto:info@rathidocuments.in" },
-              { Icon: Clock, text: "Mon–Sat: 10 AM – 7 PM | Sun: By appointment", href: null },
-            ].map(({ Icon, text, href }) => (
-              <div key={text} style={{ display: "flex", alignItems: "flex-start", gap: "0.625rem" }}>
+              { Icon: MapPin, text: "Shed no. 6, Tehsil Wazirabad, Sector-57, Gurugram, Haryana - 122001", href: null },
+              { Icon: Phone, text: "+91-9910406641", href: "tel:+919910406641" },
+              { Icon: Phone, text: "+91-9911346641", href: "tel:+919911346641" },
+              { Icon: Mail, text: "rathigurugram@gmail.com", href: "mailto:rathigurugram@gmail.com" },
+              { Icon: Clock, text: "Mon–Sat: 09 AM – 6 PM | Sun: By appointment", href: null },
+            ].map(({ Icon, text, href }, idx) => (
+              <div key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "0.625rem" }}>
                 <Icon size={15} color="#C9A84C" style={{ flexShrink: 0, marginTop: 2 }} />
                 {href ? (
                   <a href={href} style={{ fontSize: "0.875rem", color: "rgba(250,247,242,0.75)", textDecoration: "none", lineHeight: 1.5 }}

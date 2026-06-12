@@ -110,9 +110,9 @@ export function customerConfirmationEmail(data: EmailData): string {
             <table width="100%" cellpadding="0" cellspacing="0">
               <tr>
                 <td style="font-size:13px;color:#5A5A7A;line-height:1.7;">
-                  📍 <strong>Address:</strong> [Your Address], Gurugram, Haryana - 122001<br/>
-                  📞 <strong>Phone:</strong> +91-XXXXXXXXXX<br/>
-                  🕐 <strong>Hours:</strong> Monday to Saturday, 10:00 AM – 7:00 PM
+                  📍 <strong>Address:</strong> Shed no. 6, Tehsil Wazirabad, Sector-57, Gurugram, Haryana - 122001<br/>
+                  📞 <strong>Phone:</strong> +91-9910406641 / +91-9911346641<br/>
+                  🕐 <strong>Hours:</strong> Monday to Saturday, 09:00 AM – 06:00 PM
                 </td>
               </tr>
             </table>

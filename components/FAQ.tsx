@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "How do I book an appointment?",
-    a: "Simply fill in the booking form above, or WhatsApp us directly at +91-9910406641. We'll confirm your appointment within 2 hours.",
+    a: "Simply fill in the booking form above, or WhatsApp us directly at +91-9910406641 or +91-9911346641. We'll confirm your appointment within 2 hours.",
   },
 ];
 
