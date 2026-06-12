@@ -18,7 +18,7 @@ const leaders = [
   },
   {
     name: "Rajender Rathi",
-    title: "Document Writer",
+    title: "",
     icon: <BookOpen size={24} color="#F0D98A" />,
     role: "Senior Drafting Expert",
     desc: "A veteran drafting specialist with over 15 years of hands-on experience writing Rent Agreements, Sale Deeds, GPA, SPA, Affidavits, and registry paperwork.",
@@ -87,16 +87,16 @@ export default function Leadership() {
               {/* Top Accent Line */}
               <div className="card-top-accent" />
 
-              {/* Icon */}
-              <div style={{ display: "flex", alignItems: "center", marginBottom: "1.5rem" }}>
-                <div className="leader-icon-bg">{leader.icon}</div>
+              {/* Icon + Name row */}
+              <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "0.75rem" }}>
+                <div className="leader-icon-bg" style={{ flexShrink: 0 }}>{leader.icon}</div>
+                <h3 className="leader-name" style={{ margin: 0 }}>
+                  {leader.name}{leader.title ? `, ${leader.title}` : ""}
+                </h3>
               </div>
 
-              {/* Name & Role */}
-              <h3 className="leader-name">
-                {leader.name},&nbsp;<span style={{ fontWeight: 500, color: "#9B7A2F" }}>{leader.title}</span>
-              </h3>
-              <p className="leader-role">{leader.role}</p>
+              {/* Role */}
+              <p className="leader-role" style={{ marginBottom: "0" }}>{leader.role}</p>
 
               {/* Divider */}
               <div style={{ height: "1px", background: "#E2DACE", margin: "1.25rem 0" }} />
