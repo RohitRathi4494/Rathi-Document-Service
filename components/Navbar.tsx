@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -13,43 +12,21 @@ const navLinks = [
 
 function Logo() {
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: "0.625rem" }}>
-      <Image
-        src="/logo.png"
-        alt="Rathi Document Point Logo"
-        width={48}
-        height={48}
-        style={{ objectFit: "contain", flexShrink: 0 }}
-        priority
-      />
-      <div>
-        <span
-          style={{
-            fontFamily: "var(--font-playfair)",
-            fontWeight: 700,
-            fontSize: "1rem",
-            color: "#1B3A6B",
-            letterSpacing: "-0.01em",
-            lineHeight: 1.15,
-            display: "block",
-          }}
-        >
-          Rathi Document
-        </span>
-        <span
-          style={{
-            fontFamily: "var(--font-playfair)",
-            fontWeight: 700,
-            fontSize: "1rem",
-            color: "#1B3A6B",
-            letterSpacing: "-0.01em",
-            lineHeight: 1.15,
-            display: "block",
-          }}
-        >
-          Point
-        </span>
-      </div>
+    <div style={{ display: "flex", alignItems: "center" }}>
+      <span
+        style={{
+          fontFamily: "var(--font-playfair)",
+          fontWeight: 800,
+          fontSize: "clamp(1.1rem, 3.5vw, 1.45rem)",
+          color: "#1B3A6B",
+          letterSpacing: "-0.015em",
+          lineHeight: 1.2,
+          whiteSpace: "nowrap",
+        }}
+      >
+        Rathi Document Point{" "}
+        <span style={{ color: "#C9A84C", fontSize: "0.85em", fontWeight: 700 }}>(Regd.)</span>
+      </span>
     </div>
   );
 }
