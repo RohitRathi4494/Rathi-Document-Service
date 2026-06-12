@@ -25,7 +25,7 @@ function Logo() {
         }}
       >
         Rathi Document Point{" "}
-        <span style={{ color: "#C9A84C", fontSize: "0.85em", fontWeight: 700 }}>(Regd.)</span>
+        <span style={{ fontSize: "0.85em", fontWeight: 700 }}>(Regd.)</span>
       </span>
     </div>
   );
