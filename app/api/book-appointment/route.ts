@@ -21,14 +21,15 @@ export async function POST(req: NextRequest) {
     }
 
     const data = validation.data;
-    const fromEmail = process.env.FROM_EMAIL || "noreply@rathidocuments.in";
+    const fromEmail = process.env.FROM_EMAIL || process.env.SMTP_USER || "noreply@rathidocuments.in";
     const ownerEmail = process.env.OWNER_EMAIL || "owner@rathidocuments.in";
+    const mailSender = process.env.SMTP_USER || fromEmail;
 
     // Send emails — but don't block success if email fails
     try {
       // Customer confirmation
       await transporter.sendMail({
-        from: `"Rathi Document Services" <${fromEmail}>`,
+        from: `"Rathi Document Services" <${mailSender}>`,
         to: data.email,
         subject: "Your Appointment is Confirmed — Rathi Document Services",
         html: customerConfirmationEmail(data),
@@ -36,7 +37,7 @@ export async function POST(req: NextRequest) {
 
       // Owner alert
       await transporter.sendMail({
-        from: `"Rathi Document Services Website" <${fromEmail}>`,
+        from: `"Rathi Document Services Website" <${mailSender}>`,
         to: ownerEmail,
         subject: `🔔 New Appointment Request — ${data.documentType} — ${data.name}`,
         html: ownerAlertEmail(data),
