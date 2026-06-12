@@ -212,9 +212,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* needed so absolute pulse is scoped here */
+  isolation: isolate;
 }
 
 .whatsapp-btn {
+  position: relative;
+  z-index: 2;
   width: 58px;
   height: 58px;
   border-radius: 50%;
@@ -235,11 +239,14 @@ body {
 
 .whatsapp-pulse {
   position: absolute;
+  z-index: 1;
   width: 58px;
   height: 58px;
   border-radius: 50%;
   background-color: #25d366;
   animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  /* CRITICAL: never block click events */
+  pointer-events: none;
 }
 
 @keyframes pulse-ring {
