@@ -22,84 +22,72 @@ const services = [
     name: "Rent Agreement",
     description:
       "Most common residential/commercial property document. Legally binding, stamp duty compliant.",
-    price: "Starting ₹300",
   },
   {
     icon: Building,
     name: "Lease Agreement",
     description:
       "Long-term property lease document for 11 months and above. We draft, stamp, and assist with registration.",
-    price: "Starting ₹500",
   },
   {
     icon: Stamp,
     name: "Affidavit",
     description:
       "Sworn legal statement for all purposes — court, school, government use.",
-    price: "Starting ₹200",
   },
   {
     icon: Scale,
     name: "General Power of Attorney (GPA)",
     description:
       "Authorize someone to act on your behalf for all matters legally and comprehensively.",
-    price: "Starting ₹800",
   },
   {
     icon: FileText,
     name: "Special Power of Attorney (SPA)",
     description:
       "Authorize someone for specific transactions only — such as selling a particular property.",
-    price: "Starting ₹600",
   },
   {
     icon: FileCheck,
     name: "Sale Deed",
     description:
       "Transfer of property ownership. We draft, prepare, and assist with full registration at the sub-registrar office in Gurugram.",
-    price: "Starting ₹1500",
   },
   {
     icon: ScrollText,
     name: "Agreement to Sell",
     description:
       "Pre-sale agreement between buyer and seller before final registration of property. We handle drafting and registration assistance.",
-    price: "Starting ₹1000",
   },
   {
     icon: Users,
     name: "Relinquishment Deed",
     description:
       "Surrender of property rights or share among family members. Legally drafted.",
-    price: "Starting ₹1200",
   },
   {
     icon: ClipboardCheck,
     name: "Will / Vasiyatnama",
     description:
       "Legal declaration of property and asset distribution as per your wishes.",
-    price: "Starting ₹1500",
   },
   {
     icon: Shield,
     name: "Indemnity Bond",
     description:
       "Legal protection document for financial or property matters. Court admissible.",
-    price: "Starting ₹400",
   },
   {
     icon: FileX,
     name: "NOC (No Objection Certificate)",
     description:
       "From landlord, employer, or society as required by any authority.",
-    price: "Starting ₹200",
   },
   {
     icon: BadgeCheck,
     name: "Court / Income Affidavit",
     description:
       "Notarized sworn statement for court or government submission. Quickly prepared.",
-    price: "Starting ₹200",
   },
 ];
 
@@ -186,23 +174,12 @@ function ServiceCard({
 
       <div
         style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
           paddingTop: "0.75rem",
           borderTop: "1px solid #E2DACE",
+          display: "flex",
+          justifyContent: "flex-end",
         }}
       >
-        <span
-          style={{
-            fontFamily: "var(--font-inter)",
-            fontWeight: 700,
-            fontSize: "0.9375rem",
-            color: "#C9A84C",
-          }}
-        >
-          {service.price}
-        </span>
         <button
           onClick={scrollToBook}
           style={{
