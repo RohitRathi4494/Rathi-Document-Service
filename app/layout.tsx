@@ -36,14 +36,20 @@ export const metadata: Metadata = {
     "agreement to sell gurugram",
     "court documents gurugram",
   ],
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   openGraph: {
     title: "Rathi Document Point — Gurugram's Trusted Legal Document Service",
     description:
       "Rent Agreement, Affidavit, GPA, SPA, Sale Deed & all legal documents drafted & registered by experts. Serving all of Gurugram.",
-    url: "https://rathidocuments.in",
+    url: "https://rathidocumentpoint.in",
     siteName: "Rathi Document Point",
     locale: "en_IN",
     type: "website",
+    images: [{ url: "/logo.png", width: 512, height: 512, alt: "Rathi Document Point Logo" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -52,7 +58,7 @@ export const metadata: Metadata = {
       "Expert legal document drafting & registration in Gurugram — Rent Agreement, Affidavit, GPA, SPA, Sale Deed and more.",
   },
   alternates: {
-    canonical: "https://rathidocuments.in",
+    canonical: "https://rathidocumentpoint.in",
   },
   robots: {
     index: true,
