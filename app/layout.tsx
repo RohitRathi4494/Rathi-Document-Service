@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     "court documents gurugram",
   ],
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/logo-rdp.png",
+    shortcut: "/logo-rdp.png",
+    apple: "/logo-rdp.png",
   },
   openGraph: {
     title: "Rathi Document Point — Gurugram's Trusted Legal Document Service",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Rathi Document Point",
     locale: "en_IN",
     type: "website",
-    images: [{ url: "/logo.png", width: 512, height: 512, alt: "Rathi Document Point Logo" }],
+    images: [{ url: "/logo-rdp.png", width: 512, height: 512, alt: "Rathi Document Point Logo" }],
   },
   twitter: {
     card: "summary_large_image",

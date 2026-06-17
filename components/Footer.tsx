@@ -63,7 +63,7 @@ export default function Footer() {
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
             <Image
-              src="/logo.png"
+              src="/logo-rdp.png"
               alt="Rathi Document Point Logo"
               width={52}
               height={52}
