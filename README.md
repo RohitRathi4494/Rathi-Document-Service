@@ -2,7 +2,7 @@
 
 Production-ready Next.js website for **Rathi Document Point**, Gurugram's trusted legal document drafting service.
 
-**Live at:** [rathidocuments.in](https://rathidocuments.in)
+**Live at:** [rathidocumentpoint.in](https://rathidocumentpoint.in)
 
 ---
 
@@ -38,7 +38,7 @@ SMTP_PASS=your-16-char-app-password   # Gmail > Security > 2FA > App Passwords
 
 # Email recipients
 OWNER_EMAIL=father@email.com
-FROM_EMAIL=noreply@rathidocuments.in
+FROM_EMAIL=noreply@rathidocumentpoint.in
 
 # Public env vars
 NEXT_PUBLIC_WHATSAPP=91XXXXXXXXXX      # No spaces, no +, e.g. 919876543210

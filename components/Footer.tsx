@@ -279,7 +279,7 @@ export default function Footer() {
           © 2024 Rathi Document Point. All rights reserved.
         </p>
         <p style={{ fontSize: "0.8125rem", color: "rgba(250,247,242,0.4)", margin: 0 }}>
-          rathidocuments.in
+          rathidocumentpoint.in
         </p>
       </div>
 

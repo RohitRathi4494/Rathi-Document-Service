@@ -98,7 +98,7 @@ export function customerConfirmationEmail(data: EmailData): string {
 
             <!-- WhatsApp CTA -->
             <div style="text-align:center;margin-bottom:32px;">
-              <a href="https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%20just%20booked%20an%20appointment%20for%20${encodeURIComponent(data.documentType)}%20on%20rathidocuments.in"
+              <a href="https://wa.me/${WHATSAPP_NUMBER}?text=Hello%2C%20I%20just%20booked%20an%20appointment%20for%20${encodeURIComponent(data.documentType)}%20on%20rathidocumentpoint.in"
                  style="display:inline-block;background:#25D366;color:#ffffff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;">
                 💬 Chat With Us on WhatsApp
               </a>
@@ -122,7 +122,7 @@ export function customerConfirmationEmail(data: EmailData): string {
         <!-- Footer bar -->
         <tr>
           <td style="background:${BRAND_NAVY};padding:20px 40px;text-align:center;">
-            <p style="margin:0;font-size:12px;color:rgba(255,255,255,0.6);">© 2024 Rathi Document Point · rathidocuments.in</p>
+            <p style="margin:0;font-size:12px;color:rgba(255,255,255,0.6);">© 2024 Rathi Document Point · rathidocumentpoint.in</p>
             <p style="margin:4px 0 0;font-size:11px;color:rgba(255,255,255,0.4);">This is an automated confirmation. Please do not reply to this email.</p>
           </td>
         </tr>
@@ -156,7 +156,7 @@ export function ownerAlertEmail(data: EmailData): string {
         <tr>
           <td style="background:${BRAND_NAVY};padding:28px 40px;text-align:center;">
             <h1 style="margin:0;font-family:Georgia,serif;font-size:20px;color:${BRAND_GOLD};">🔔 New Appointment Request</h1>
-            <p style="margin:6px 0 0;color:rgba(255,255,255,0.8);font-size:14px;">rathidocuments.in — ${getISTTimestamp()}</p>
+            <p style="margin:6px 0 0;color:rgba(255,255,255,0.8);font-size:14px;">rathidocumentpoint.in — ${getISTTimestamp()}</p>
           </td>
         </tr>
 
@@ -221,7 +221,7 @@ export function ownerAlertEmail(data: EmailData): string {
         <!-- Footer -->
         <tr>
           <td style="background:${BRAND_NAVY};padding:16px 40px;text-align:center;">
-            <p style="margin:0;font-size:12px;color:rgba(255,255,255,0.6);">Rathi Document Point · rathidocuments.in · Internal Notification</p>
+            <p style="margin:0;font-size:12px;color:rgba(255,255,255,0.6);">Rathi Document Point · rathidocumentpoint.in · Internal Notification</p>
           </td>
         </tr>
 

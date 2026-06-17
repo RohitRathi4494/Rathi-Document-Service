@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://rathidocuments.in/sitemap.xml",
+    sitemap: "https://rathidocumentpoint.in/sitemap.xml",
   };
 }

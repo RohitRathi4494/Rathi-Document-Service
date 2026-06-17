@@ -72,7 +72,7 @@ const jsonLd = {
   name: "Rathi Document Point",
   description:
     "Professional legal document drafting & registration service in Gurugram — Rent Agreement, Affidavit, GPA, SPA, Sale Deed, Lease, and all court documents.",
-  url: "https://rathidocuments.in",
+  url: "https://rathidocumentpoint.in",
   telephone: "+91-9910406641",
   address: {
     "@type": "PostalAddress",
