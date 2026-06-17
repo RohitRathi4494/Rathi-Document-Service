@@ -124,9 +124,9 @@ function ServiceCard({
   return (
     <motion.div
       variants={cardVariants}
-      className="card"
+      className="card service-card"
       role="article"
-      style={{ padding: "1.75rem", display: "flex", flexDirection: "column", gap: "1rem" }}
+      style={{ padding: "1.75rem", display: "flex", flexDirection: "column", gap: "1rem", height: "100%" }}
       aria-label={`Service: ${service.name}`}
     >
       <div
@@ -241,6 +241,7 @@ export default function ServicesGrid() {
 
         {/* Grid */}
         <motion.div
+          className="services-grid"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -249,6 +250,7 @@ export default function ServicesGrid() {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "1.5rem",
+            alignItems: "stretch",
           }}
         >
           {services.map((service, i) => (
@@ -262,14 +264,22 @@ export default function ServicesGrid() {
           background: linear-gradient(135deg, #F0D98A, #C9A84C) !important;
           border-color: #C9A84C !important;
         }
-        @media (max-width: 1024px) {
-          #services .grid-3 { grid-template-columns: repeat(2, 1fr); }
-        }
         @media (max-width: 640px) {
-          #services [style*="repeat(3"] { grid-template-columns: 1fr !important; }
+          .services-grid {
+            grid-template-columns: 1fr !important;
+          }
         }
-        @media (max-width: 1024px) {
-          #services [style*="repeat(3"] { grid-template-columns: repeat(2, 1fr) !important; }
+        @media (min-width: 641px) and (max-width: 1024px) {
+          .services-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        .services-grid {
+          align-items: stretch;
+        }
+        .service-card {
+          height: 100%;
+          box-sizing: border-box;
         }
       `}</style>
     </section>

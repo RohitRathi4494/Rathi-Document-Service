@@ -233,6 +233,7 @@ export default function ContactSection() {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112167.54530780617!2d77.02665!3d28.4595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d582e38859%3A0x2cf5fe8e5c64b1e!2sGurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1700000000000"
               width="100%"
               height="380"
+              className="contact-map-iframe"
               style={{ border: 0, display: "block" }}
               allowFullScreen={true}
               loading="lazy"
@@ -313,6 +314,18 @@ export default function ContactSection() {
           </a>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .contact-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+          }
+          .contact-map-iframe {
+            height: 260px !important;
+            min-height: 260px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
