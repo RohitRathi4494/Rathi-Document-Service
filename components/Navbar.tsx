@@ -191,19 +191,7 @@ export default function Navbar() {
         </div>
       )}
 
-      <style>{`
-        @media (max-width: 768px) {
-          .hidden-mobile { display: none !important; }
-          .show-mobile { display: flex !important; }
-          .navbar-glass nav {
-            padding-left: 1.25rem !important;
-            padding-right: 1.25rem !important;
-          }
-        }
-        @media (min-width: 769px) {
-          .show-mobile { display: none !important; }
-        }
-      `}</style>
+
     </>
   );
 }

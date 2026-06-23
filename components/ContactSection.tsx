@@ -314,18 +314,7 @@ export default function ContactSection() {
           </a>
         </div>
       </div>
-      <style>{`
-        @media (max-width: 768px) {
-          .contact-grid {
-            grid-template-columns: 1fr !important;
-            gap: 2rem !important;
-          }
-          .contact-map-iframe {
-            height: 260px !important;
-            min-height: 260px !important;
-          }
-        }
-      `}</style>
+
     </section>
   );
 }

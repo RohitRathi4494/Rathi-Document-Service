@@ -469,12 +469,7 @@ export default function AppointmentForm() {
         </div>
       </div>
 
-      <style>{`
-        @keyframes spin { to { transform: rotate(360deg); } }
-        @media (max-width: 640px) {
-          .form-row { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
+
     </section>
   );
 }

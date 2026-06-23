@@ -199,19 +199,7 @@ export default function WhyChooseUs() {
         </div>
       </motion.div>
 
-      <style>{`
-        .why-us-section {
-          grid-template-columns: 1fr 1fr;
-        }
-        @media (max-width: 768px) {
-          .why-us-section {
-            grid-template-columns: 1fr !important;
-          }
-          .why-us-section > div {
-            padding: 3.5rem 1.5rem !important;
-          }
-        }
-      `}</style>
+
     </section>
   );
 }

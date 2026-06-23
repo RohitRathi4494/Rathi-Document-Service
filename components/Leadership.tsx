@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, BookOpen, ShieldCheck, Scale } from "lucide-react";
+import { Award, BookOpen, Scale } from "lucide-react";
 
 const leaders = [
   {
@@ -134,128 +134,7 @@ export default function Leadership() {
         </div>
       </div>
 
-      <style>{`
-        .leadership-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 2.5rem;
-        }
 
-        .leader-card {
-          background: #ffffff;
-          border: 1px solid #E2DACE;
-          border-radius: 16px;
-          padding: 2.5rem;
-          position: relative;
-          overflow: hidden;
-          box-shadow: 0 4px 20px rgba(27,58,107,0.04);
-          transition: all 0.3s ease;
-        }
-
-        .leader-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 10px 30px rgba(27,58,107,0.08);
-          border-color: #C9A84C;
-        }
-
-        .card-top-accent {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 4px;
-          background: #1B3A6B;
-          transition: background 0.3s ease;
-        }
-
-        .leader-card:hover .card-top-accent {
-          background: #C9A84C;
-        }
-
-        .leader-icon-bg {
-          width: 50px;
-          height: 50px;
-          border-radius: 12px;
-          background: #1B3A6B;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0 4px 12px rgba(27, 58, 107, 0.15);
-        }
-
-        .leader-badge {
-          font-family: "var(--font-inter)";
-          font-size: 0.75rem;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          color: #C9A84C;
-          background: rgba(201,168,76,0.1);
-          border: 1px solid rgba(201,168,76,0.2);
-          padding: 0.375rem 0.875rem;
-          border-radius: 100px;
-        }
-
-        .leader-name {
-          font-family: "var(--font-playfair)";
-          font-size: 1.75rem;
-          font-weight: 700;
-          color: #1B3A6B;
-          margin-bottom: 0.375rem;
-        }
-
-        .leader-role {
-          font-family: "var(--font-inter)";
-          font-size: 0.9375rem;
-          font-weight: 600;
-          color: #C9A84C;
-          margin-bottom: 0;
-        }
-
-        .leader-desc {
-          font-family: "var(--font-inter)";
-          font-size: 0.9375rem;
-          color: #4A4A68;
-          line-height: 1.6;
-        }
-
-        .leader-bullet-list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          display: flex;
-          flex-direction: column;
-          gap: 0.625rem;
-        }
-
-        .leader-bullet-list li {
-          font-family: "var(--font-inter)";
-          font-size: 0.875rem;
-          color: #4A4A68;
-          display: flex;
-          align-items: center;
-          gap: 0.625rem;
-          font-weight: 500;
-        }
-
-        .bullet-dot {
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: #C9A84C;
-          flex-shrink: 0;
-        }
-
-        @media (max-width: 768px) {
-          .leadership-grid {
-            grid-template-columns: 1fr;
-            gap: 1.75rem;
-          }
-          .leader-card {
-            padding: 1.75rem;
-          }
-        }
-      `}</style>
     </section>
   );
 }

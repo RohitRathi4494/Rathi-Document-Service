@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
@@ -57,14 +58,10 @@ const trustBadges = [
   { icon: "📍", label: "All Gurugram", sub: "Areas Covered" },
 ];
 
-const containerVariants: Variants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.15 } },
-};
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 28 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+// Only animate below-fold/non-LCP elements
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
 export default function Hero() {
@@ -79,116 +76,71 @@ export default function Hero() {
   return (
     <section
       id="home"
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        position: "relative",
-        overflow: "hidden",
-        paddingTop: 108,
-        paddingBottom: 64,
-        backgroundImage: "linear-gradient(rgba(15, 37, 72, 0.9), rgba(11, 28, 54, 0.85)), url('/legal_bg.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="hero-section"
       aria-label="Hero — Rathi Document Point"
     >
+      {/* LCP-optimized background image — preloadable via Next.js Image priority */}
+      <div className="hero-bg-wrap" aria-hidden="true">
+        <Image
+          src="/legal_bg.png"
+          alt=""
+          fill
+          priority
+          fetchPriority="high"
+          quality={75}
+          sizes="100vw"
+          className="hero-bg-img"
+        />
+        {/* Dark overlay */}
+        <div className="hero-overlay" />
+      </div>
+
       {/* Seal watermark */}
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          pointerEvents: "none",
-        }}
-      >
+      <div className="hero-seal-wrap" aria-hidden="true">
         <GoldSeal size={520} />
       </div>
 
       {/* Content */}
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        style={{
-          position: "relative",
-          zIndex: 2,
-          textAlign: "center",
-          maxWidth: 760,
-          padding: "0 1.5rem",
-        }}
-      >
-        {/* Badge */}
-        <motion.div variants={itemVariants}>
-          <span
-            style={{
-              display: "inline-block",
-              background: "rgba(201,168,76,0.15)",
-              border: "1px solid rgba(201,168,76,0.4)",
-              borderRadius: 100,
-              padding: "0.375rem 1.125rem",
-              fontFamily: "var(--font-inter)",
-              fontSize: 11,
-              fontWeight: 700,
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              color: "#F0D98A",
-              marginBottom: "1.5rem",
-            }}
-          >
+      <div className="hero-content">
+        {/* Badge — animated (not LCP element) */}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          transition={{ delay: 0.1 }}
+        >
+          <span className="hero-badge">
             Gurugram&apos;s Most Trusted Document Service
           </span>
         </motion.div>
 
-        {/* H1 */}
-        <motion.h1
-          variants={itemVariants}
-          style={{
-            fontFamily: "var(--font-playfair)",
-            fontSize: "clamp(2.25rem, 7vw, 4.25rem)",
-            fontWeight: 800,
-            color: "#ffffff",
-            lineHeight: 1.1,
-            letterSpacing: "-0.02em",
-            marginBottom: "1.5rem",
-          }}
-        >
+        {/* H1 — NO animation delay, renders immediately for LCP */}
+        <h1 className="hero-h1">
           Every Legal Document,
           <br />
-          <span style={{ color: "#F0D98A" }}>Done Right.</span>
-        </motion.h1>
+          <span className="hero-h1-gold">Done Right.</span>
+        </h1>
 
-        {/* Body */}
+        {/* Body — animated */}
         <motion.p
-          variants={itemVariants}
-          style={{
-            fontSize: "clamp(1rem, 2.5vw, 1.125rem)",
-            color: "rgba(250,247,242,0.88)",
-            lineHeight: 1.8,
-            marginBottom: "2.25rem",
-            maxWidth: 580,
-            margin: "0 auto 2.25rem",
-          }}
+          className="hero-body"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          transition={{ delay: 0.2 }}
         >
           From Rent Agreements to Sale Deeds — we draft, prepare, register,
           and deliver all your legal documents with accuracy, speed, and 15+
           years of expertise. Serving all of Gurugram.
         </motion.p>
 
-        {/* CTAs */}
+        {/* CTAs — animated */}
         <motion.div
-          variants={itemVariants}
-          style={{
-            display: "flex",
-            gap: "1rem",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            marginBottom: "3rem",
-          }}
+          className="hero-ctas"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          transition={{ delay: 0.3 }}
         >
           <button
             onClick={scrollToBook}
@@ -210,79 +162,28 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        {/* Trust badges */}
+        {/* Trust badges — animated */}
         <motion.div
-          variants={itemVariants}
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "1rem",
-            maxWidth: 680,
-            margin: "0 auto",
-          }}
+          className="hero-badges-grid"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          transition={{ delay: 0.4 }}
         >
           {trustBadges.map((badge) => (
-            <div
-              key={badge.label}
-              style={{
-                background: "rgba(255,255,255,0.08)",
-                border: "1px solid rgba(201,168,76,0.25)",
-                borderRadius: 10,
-                padding: "0.875rem 0.5rem",
-                textAlign: "center",
-              }}
-            >
-              <div style={{ fontSize: "1.5rem", marginBottom: "0.25rem" }}>
-                {badge.icon}
-              </div>
-              <div
-                style={{
-                  fontFamily: "var(--font-inter)",
-                  fontWeight: 700,
-                  fontSize: "0.875rem",
-                  color: "#F0D98A",
-                  lineHeight: 1.2,
-                }}
-              >
-                {badge.label}
-              </div>
-              <div
-                style={{
-                  fontFamily: "var(--font-inter)",
-                  fontSize: "0.75rem",
-                  color: "rgba(250,247,242,0.7)",
-                  marginTop: "0.125rem",
-                }}
-              >
-                {badge.sub}
-              </div>
+            <div key={badge.label} className="trust-badge-card">
+              <div className="trust-badge-icon">{badge.icon}</div>
+              <div className="trust-badge-label">{badge.label}</div>
+              <div className="trust-badge-sub">{badge.sub}</div>
             </div>
           ))}
         </motion.div>
-      </motion.div>
-
-      {/* Scroll indicator */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: "2rem",
-          left: "50%",
-          transform: "translateX(-50%)",
-          color: "rgba(255,255,255,0.5)",
-          animation: "float 2s ease-in-out infinite",
-        }}
-        aria-hidden="true"
-      >
-        <ChevronDown size={28} />
       </div>
 
-      <style>{`
-        @media (max-width: 640px) {
-          section[id="home"] > div > div:last-child {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
-        }
-      `}</style>
+      {/* Scroll indicator — CSS animation, no JS */}
+      <div className="hero-scroll-indicator" aria-hidden="true">
+        <ChevronDown size={28} />
+      </div>
     </section>
   );
 }

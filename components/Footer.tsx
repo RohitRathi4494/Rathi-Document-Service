@@ -67,6 +67,8 @@ export default function Footer() {
               alt="Rathi Document Point Logo"
               width={52}
               height={52}
+              loading="lazy"
+              sizes="52px"
               style={{ objectFit: "contain", flexShrink: 0 }}
             />
             <div>
@@ -283,14 +285,7 @@ export default function Footer() {
         </p>
       </div>
 
-      <style>{`
-        @media (max-width: 1024px) {
-          .footer-grid { grid-template-columns: 1fr 1fr !important; }
-        }
-        @media (max-width: 640px) {
-          .footer-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
-        }
-      `}</style>
+
     </footer>
   );
 }

@@ -177,17 +177,7 @@ export default function HowItWorks() {
         </div>
       </div>
 
-      <style>{`
-        .steps-grid {
-          grid-template-columns: 1fr auto 1fr auto 1fr;
-        }
-        @media (max-width: 768px) {
-          .steps-grid {
-            grid-template-columns: 1fr !important;
-          }
-          .step-arrow { display: none !important; }
-        }
-      `}</style>
+
     </section>
   );
 }

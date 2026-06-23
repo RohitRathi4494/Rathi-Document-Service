@@ -161,19 +161,7 @@ export default function Testimonials() {
         </div>
       </div>
 
-      <style>{`
-        @media (max-width: 768px) {
-          .testimonials-grid {
-            grid-template-columns: 1fr !important;
-            overflow-x: auto;
-          }
-        }
-        @media (min-width: 769px) and (max-width: 1024px) {
-          .testimonials-grid {
-            grid-template-columns: 1fr 1fr !important;
-          }
-        }
-      `}</style>
+
     </section>
   );
 }

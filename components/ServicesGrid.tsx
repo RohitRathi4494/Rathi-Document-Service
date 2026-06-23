@@ -259,29 +259,7 @@ export default function ServicesGrid() {
         </motion.div>
       </div>
 
-      <style>{`
-        .card:hover .service-icon-wrap {
-          background: linear-gradient(135deg, #F0D98A, #C9A84C) !important;
-          border-color: #C9A84C !important;
-        }
-        @media (max-width: 640px) {
-          .services-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-        @media (min-width: 641px) and (max-width: 1024px) {
-          .services-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
-        }
-        .services-grid {
-          align-items: stretch;
-        }
-        .service-card {
-          height: 100%;
-          box-sizing: border-box;
-        }
-      `}</style>
+
     </section>
   );
 }
