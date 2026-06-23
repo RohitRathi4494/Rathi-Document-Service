@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ClipboardList, Phone, FileCheck } from "lucide-react";
 
 const steps = [
@@ -78,7 +78,7 @@ export default function HowItWorks() {
             const Icon = step.icon;
             return (
               <Fragment key={step.number}>
-                <motion.div
+                <m.div
                   initial={{ opacity: 0, y: 32 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
@@ -152,7 +152,7 @@ export default function HowItWorks() {
                   >
                     {step.description}
                   </p>
-                </motion.div>
+                </m.div>
 
                 {/* Arrow connector (between steps) */}
                 {i < 2 && (

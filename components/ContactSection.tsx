@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, MessageCircle, Map } from "lucide-react";
 
 const WHATSAPP = "919910406641";
@@ -90,7 +90,7 @@ export default function ContactSection() {
           className="contact-grid"
         >
           {/* Left — Contact Details */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -207,10 +207,10 @@ export default function ContactSection() {
               <MessageCircle size={18} />
               Open WhatsApp
             </a>
-          </motion.div>
+          </m.div>
 
           {/* Right — Map Placeholder */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -270,7 +270,7 @@ export default function ContactSection() {
                 Open in Maps
               </a>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
 

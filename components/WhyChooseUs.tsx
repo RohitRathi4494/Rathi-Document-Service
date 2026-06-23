@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 
 const features = [
@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
       aria-labelledby="why-heading"
     >
       {/* Left — Navy */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0, x: -32 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -128,10 +128,10 @@ export default function WhyChooseUs() {
             — Rathi Document Point
           </cite>
         </blockquote>
-      </motion.div>
+      </m.div>
 
       {/* Right — Cream */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0, x: 32 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -160,7 +160,7 @@ export default function WhyChooseUs() {
 
         <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
           {features.map((feature, i) => (
-            <motion.div
+            <m.div
               key={feature}
               initial={{ opacity: 0, x: 16 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -194,10 +194,10 @@ export default function WhyChooseUs() {
               >
                 {feature}
               </span>
-            </motion.div>
+            </m.div>
           ))}
         </div>
-      </motion.div>
+      </m.div>
 
 
     </section>

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const areas = [
   "Sector 14", "Sector 15", "Sector 22", "Sector 23", "Sector 40",
@@ -37,7 +37,7 @@ export default function AreasWeServe() {
           </p>
         </div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -51,7 +51,7 @@ export default function AreasWeServe() {
           }}
         >
           {areas.map((area, i) => (
-            <motion.span
+            <m.span
               key={area}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -60,9 +60,9 @@ export default function AreasWeServe() {
               className="area-pill"
             >
               {area}
-            </motion.span>
+            </m.span>
           ))}
-        </motion.div>
+        </m.div>
 
         <div style={{ textAlign: "center" }}>
           <p

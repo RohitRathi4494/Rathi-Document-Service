@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { Loader2, CheckCircle, MessageCircle } from "lucide-react";
 import {
   appointmentSchema,
@@ -16,7 +16,7 @@ const WHATSAPP = "919910406641";
 
 function SuccessCard({ data, onReset }: { data: AppointmentFormData; onReset: () => void }) {
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       className="success-card"
@@ -82,7 +82,7 @@ function SuccessCard({ data, onReset }: { data: AppointmentFormData; onReset: ()
           WhatsApp Us Directly →
         </a>
       </div>
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -228,7 +228,7 @@ export default function AppointmentForm() {
             {successData ? (
               <SuccessCard data={successData} onReset={handleReset} />
             ) : (
-              <motion.form
+              <m.form
                 key="form"
                 initial={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -463,7 +463,7 @@ export default function AppointmentForm() {
                 >
                   🔒 Your information is private and will only be used to process your appointment.
                 </p>
-              </motion.form>
+              </m.form>
             )}
           </AnimatePresence>
         </div>

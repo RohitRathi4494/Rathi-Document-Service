@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { MotionProvider } from "@/components/MotionProvider";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -92,6 +93,12 @@ export const metadata: Metadata = {
     // Add Google Search Console verification token here when available
     // google: "your-verification-token",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 const jsonLd = {
@@ -187,10 +194,12 @@ export default function RootLayout({
         />
       </head>
       <body className="font-inter">
-        <Navbar />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <FloatingWhatsApp />
+        <MotionProvider>
+          <Navbar />
+          <main id="main-content">{children}</main>
+          <Footer />
+          <FloatingWhatsApp />
+        </MotionProvider>
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 
 const faqs = [
@@ -63,7 +63,7 @@ function FaqItem({ faq, isOpen, onClick }: {
 
       <AnimatePresence initial={false}>
         {isOpen && (
-          <motion.div
+          <m.div
             key="answer"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
@@ -72,7 +72,7 @@ function FaqItem({ faq, isOpen, onClick }: {
             className="faq-answer"
           >
             <div style={{ paddingBottom: "1.25rem" }}>{faq.a}</div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </div>
@@ -108,7 +108,7 @@ export default function FAQ() {
           </p>
         </div>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -129,7 +129,7 @@ export default function FAQ() {
               onClick={() => toggle(i)}
             />
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

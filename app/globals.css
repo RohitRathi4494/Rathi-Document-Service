@@ -40,6 +40,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 body {
@@ -48,6 +49,7 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100vw; /* belt-and-suspenders */
 }
 
 /* ============================================================
@@ -570,7 +572,10 @@ body {
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 1;
+  overflow: hidden; /* prevent 520px SVG from causing horizontal scroll */
+  max-width: 100vw;
 }
+
 
 .hero-content {
   position: relative;

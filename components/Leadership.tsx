@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Award, BookOpen, Scale } from "lucide-react";
 
 const leaders = [
@@ -76,7 +76,7 @@ export default function Leadership() {
         {/* Leaders Grid */}
         <div className="leadership-grid">
           {leaders.map((leader, i) => (
-            <motion.div
+            <m.div
               key={leader.name}
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -129,7 +129,7 @@ export default function Leadership() {
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Star, ExternalLink } from "lucide-react";
 
 const testimonials = [
@@ -77,7 +77,7 @@ export default function Testimonials() {
           className="testimonials-grid"
         >
           {testimonials.map((t, i) => (
-            <motion.div
+            <m.div
               key={t.name}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -135,7 +135,7 @@ export default function Testimonials() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 

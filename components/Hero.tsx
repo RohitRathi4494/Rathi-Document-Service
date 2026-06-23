@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, type Variants } from "framer-motion";
+import { m, type Variants } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const WHATSAPP = "919910406641";
@@ -87,7 +87,7 @@ export default function Hero() {
           fill
           priority
           fetchPriority="high"
-          quality={75}
+          quality={60}
           sizes="100vw"
           className="hero-bg-img"
         />
@@ -103,7 +103,7 @@ export default function Hero() {
       {/* Content */}
       <div className="hero-content">
         {/* Badge — animated (not LCP element) */}
-        <motion.div
+        <m.div
           initial="hidden"
           animate="visible"
           variants={fadeUp}
@@ -112,7 +112,7 @@ export default function Hero() {
           <span className="hero-badge">
             Gurugram&apos;s Most Trusted Document Service
           </span>
-        </motion.div>
+        </m.div>
 
         {/* H1 — NO animation delay, renders immediately for LCP */}
         <h1 className="hero-h1">
@@ -122,7 +122,7 @@ export default function Hero() {
         </h1>
 
         {/* Body — animated */}
-        <motion.p
+        <m.p
           className="hero-body"
           initial="hidden"
           animate="visible"
@@ -132,10 +132,10 @@ export default function Hero() {
           From Rent Agreements to Sale Deeds — we draft, prepare, register,
           and deliver all your legal documents with accuracy, speed, and 15+
           years of expertise. Serving all of Gurugram.
-        </motion.p>
+        </m.p>
 
         {/* CTAs — animated */}
-        <motion.div
+        <m.div
           className="hero-ctas"
           initial="hidden"
           animate="visible"
@@ -160,10 +160,10 @@ export default function Hero() {
           >
             💬 WhatsApp Us Now
           </a>
-        </motion.div>
+        </m.div>
 
         {/* Trust badges — animated */}
-        <motion.div
+        <m.div
           className="hero-badges-grid"
           initial="hidden"
           animate="visible"
@@ -177,7 +177,7 @@ export default function Hero() {
               <div className="trust-badge-sub">{badge.sub}</div>
             </div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
 
       {/* Scroll indicator — CSS animation, no JS */}

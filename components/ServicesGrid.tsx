@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { m, type Variants } from "framer-motion";
 import {
   FileText,
   FileCheck,
@@ -122,7 +122,7 @@ function ServiceCard({
   };
 
   return (
-    <motion.div
+    <m.div
       variants={cardVariants}
       className="card service-card"
       role="article"
@@ -208,7 +208,7 @@ function ServiceCard({
           Get This →
         </button>
       </div>
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -240,7 +240,7 @@ export default function ServicesGrid() {
         </div>
 
         {/* Grid */}
-        <motion.div
+        <m.div
           className="services-grid"
           variants={containerVariants}
           initial="hidden"
@@ -256,7 +256,7 @@ export default function ServicesGrid() {
           {services.map((service, i) => (
             <ServiceCard key={service.name} service={service} index={i} />
           ))}
-        </motion.div>
+        </m.div>
       </div>
 
 
